@@ -1,6 +1,9 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { css, cx } from 'emotion'
+
+const color = 'white'
 
 function App() {
   return (
@@ -19,6 +22,19 @@ function App() {
           Learn React
         </a>
       </header>
+      <div
+      className={css`
+        padding: 32px;
+        background-color: hotpink;
+        font-size: 24px;
+        border-radius: 4px;
+        &:hover {
+          color: ${color};
+        }
+      `}
+    >
+      Hover to change color.
+    </div>
     </div>
   );
 }
